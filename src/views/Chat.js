@@ -13,6 +13,7 @@ export default class Chat extends Component {
     }
 
     cont = 0
+    btn
 
     UNSAFE_componentWillMount() {
         this.setState({
@@ -88,7 +89,16 @@ export default class Chat extends Component {
     }
 
     //Input personalizado
-    input = () => (
+    input = () => {
+        
+        
+        if(!this.state.text){
+            this.btn = true
+        } else {
+            this.btn = false
+        }
+        
+        return(
         <View style={styles.containerTextInput}>
             <View style={styles.viewTextInput}>
                 <TextInput
@@ -98,12 +108,12 @@ export default class Chat extends Component {
                 />
             </View>
             <View style={styles.btnEnviar}>
-                <TouchableOpacity onPress={() => this.enviar(this.state.text)}>
+                <TouchableOpacity disabled={this.btn} onPress={() => this.enviar(this.state.text)}>
                     <Text style={styles.btnText}>Enviar</Text>
                 </TouchableOpacity>
             </View>
         </View>
-    )
+    )}
 
     render() {
         return (
