@@ -7,6 +7,7 @@
 
 <li>Versão do React Native: 0.61.3</li>
 <li>Foi utilizado a biblioteca Gifted Chat com a seguinte versão: 0.11.3</li>
+<li>Todas as telas e arquivos necessários foram criados e organizados dentro da pasta 'src'</li>
 
 </ul>
 
